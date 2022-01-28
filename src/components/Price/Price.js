@@ -21,7 +21,7 @@ const Price = () => {
                     </Number>
                     <CardsPrice>
                         <h5>$60</h5>
-                        <p> par seance</p>
+                        <p> par seance coucou</p>
                     </CardsPrice>
                     <Duration>60 minutes </Duration>
                     <Type>Coach Personnel dedie</Type>
