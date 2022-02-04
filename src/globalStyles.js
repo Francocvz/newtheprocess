@@ -1,6 +1,10 @@
-import styled, {createGlobalStyle} from 'styled-components'
+import styled, { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle `
+const GlobalStyle = createGlobalStyle`
+
+:root {
+  font-size:62.5%;
+}
 
 * {
     box-sizing:border-box;
@@ -8,6 +12,7 @@ const GlobalStyle = createGlobalStyle `
     padding : 0;
     @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
     font-family: 'Archivo Black', sans-serif;
+    scroll-behavior:smooth;
     
     
     
@@ -24,28 +29,27 @@ const GlobalStyle = createGlobalStyle `
 `;
 
 export const Container = styled.div`
-width : 100%;
-max-width: 1300px;
-margin: 0 auto;
-padding : 0 50px;
+  width: 100%;
+  max-width: 1300px;
+  // margin: 0 auto;
+  padding: 0 50px;
 
-@media screen and (max-width: 960px) {
+  @media screen and (max-width: 960px) {
     padding: 0 30px;
-}
-`
-
-export const Section = styled.div`
-color : #fff;
-padding: 160px;
-`
-
-export const Heading = styled.h2`
-margin-bottom:1.4rem;
-font-size:3rem;
-text-align:center;
-line-height:1.1;
-font-weight:600;
+  }
 `;
 
+export const Section = styled.div`
+  color: #fff;
+  // padding: 160px;
+`;
+
+export const Heading = styled.h2`
+  // margin-bottom: 1.4rem;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 1.1;
+  font-weight: 600;
+`;
 
 export default GlobalStyle;

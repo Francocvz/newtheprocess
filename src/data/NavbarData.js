@@ -1,17 +1,22 @@
 export const navbarData = [
-	{
-		to: 'about',
-		text: 'A PROPOS',
-		className : 'none'
-	},
-	{
-		to: 'services',
-		text: 'SERVICES',
-		className : 'none'
-	},
-	{
-		to: 'contact',
-		text: 'CONTACT',
-		className : 'border'
-	},
+  {
+    to: "home",
+    text: "ACCEUIL",
+  },
+  {
+    to: "coach",
+    text: "COACH",
+  },
+  {
+    to: "services",
+    text: "SEANCES",
+  },
+  {
+    to: "tarifs",
+    text: "TARIFS",
+  },
+  {
+    to: "contact",
+    text: "CONTACT",
+  },
 ];

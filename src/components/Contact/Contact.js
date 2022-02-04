@@ -1,30 +1,69 @@
-import { ContactCards, ContactContainerCards, ContactSection, ContactTitle } from "./ContactStyles"
-import {FormData} from '../../data/FormData'
-import { FormulaireSection } from "../Formulaire/FormulaireStyles"
-import Formulaire from "../Formulaire/Formulaire"
+import {
+  ContactBottom,
+  ContactCards,
+  ContactCardsContainer,
+  ContactCardsIcon,
+  ContactContainer,
+  ContactSection,
+  ContactTitle,
+  ContactTop,
+} from "./ContactStyles";
+import Marquee from "../Marquee/Marquee";
+import Form from "../Form/Form";
+// import emailjs from "emailjs-com";
 
+const Contact = () => {
+  //   const handleOnSubmit = (e) => {
+  //     e.preventDefault();
+  //     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
+  //       (result) => {
+  //         console.log(result.text);
+  //         Swal.fire({
+  //           icon: "success",
+  //           title: "Message Sent Successfully",
+  //         });
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //         Swal.fire({
+  //           icon: "error",
+  //           title: "Ooops, something went wrong",
+  //           text: error.text,
+  //         });
+  //       }
+  //     );
+  //     e.target.reset();
+  //   };
 
-const Contact =() => {
-    return (
-        <ContactSection>
-            <ContactTitle>
-                <p>Contact</p>
-                <h2>Feel free to shoot us a message or drop in anytime</h2>
-            </ContactTitle>
-            <ContactContainerCards>
-            {FormData.map((el, index) => (
-                        <ContactCards key={index}>
-                            <img src={el.icon}/>
-                            <p>{el.description}</p>
+  return (
+    <ContactSection>
+      <ContactContainer>
+        <Marquee title={"CONTACT"} />
+        <ContactTop>
+          <ContactTitle>
+            Lorem ipsum dolor sit amet consectetur adipisicing.
+          </ContactTitle>
+          <ContactCardsContainer>
+            <ContactCards className="btn btn-three">
+              <ContactCardsIcon>
+                <img src="./images/localisation2.svg" alt="" />
+              </ContactCardsIcon>
+              <h5>alsace</h5>
+            </ContactCards>
+            <ContactCards className="btn btn-three">
+              <ContactCardsIcon>
+                <img src="./images/phone2.svg" alt="" />
+              </ContactCardsIcon>
+              <h5>06 69 69 69 69</h5>
+            </ContactCards>
+          </ContactCardsContainer>
+        </ContactTop>
+        <ContactBottom>
+          <Form />
+        </ContactBottom>
+      </ContactContainer>
+    </ContactSection>
+  );
+};
 
-                        </ContactCards>
-                    ))}
-
-            </ContactContainerCards>
-            <FormulaireSection>
-                <Formulaire/>
-            </FormulaireSection>
-        </ContactSection>
-        )
-}
-export default Contact
+export default Contact;
