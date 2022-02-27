@@ -65,19 +65,30 @@ export const NavMenu = styled.ul`
   text-align: center;
   min-height: 100%;
   background: black;
+  flex-direction: column;
+  width: ${({ show }) => (show ? "100%" : "0")};
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  transform: ${({ show }) => (show ? "translateX(-100%)" : "")};
+  visibility: ${({ show }) => (show ? "visible" : "hidden")};
+}
 
   @media screen and (max-width: 480px) {
-    flex-direction: column;
-    width: ${({ show }) => (show ? "100%" : "0")};
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 100%;
-    transition: all 0.5s ease;
-    overflow: hidden;
-    transform: ${({ show }) => (show ? "translateX(-100%)" : "")};
-    visibility: ${({ show }) => (show ? "visible" : "hidden")};
-  }
+  //   flex-direction: column;
+  //   width: ${({ show }) => (show ? "100%" : "0")};
+  //   height: 100vh;
+  //   position: fixed;
+  //   top: 0;
+  //   left: 100%;
+  //   transition: all 0.5s ease;
+  //   overflow: hidden;
+  //   transform: ${({ show }) => (show ? "translateX(-100%)" : "")};
+  //   visibility: ${({ show }) => (show ? "visible" : "hidden")};
+  // }
 `;
 
 export const TextContainer = styled.div`
